@@ -1,0 +1,275 @@
+body{
+    background-color: #f5f5f5;
+}
+/*头部导航*/
+.header{
+    position: static;
+}
+/*安全提示*/
+.tip{
+    height: 34px;
+    line-height: 34px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+.tip h5{
+    position: relative;
+    font-weight: 400;
+    display: inline-block;
+    padding-left: 22px;
+}
+.tip h5::before{
+    position: absolute;
+    content:"";
+    background: url("../images/safe_icon.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 7px;
+}
+/*主体部分*/
+.product{
+    margin-top: 10px;
+    background-color: #fff;
+    min-height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+.product .pro_tit{
+    height: 34px;
+    position: relative;
+}
+/*公用的checkbox样式*/
+.pro_checkbox{
+    width: 40px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.checkbox{
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+}
+.checkbox[checked]
+{
+    background-position: -25px 0;
+}
+.checkbox[unchecked]
+{
+    background-position: 0 0;
+}
+.pro_checkbox a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px 11px;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+.product .pro_tit .pro_content{
+    width: 100%;
+    padding-left: 40px;
+}
+.product .pro_tit .pro_content .logo,.product .pro_tit .pro_content .state{
+    float: left;
+}
+.product .pro_tit .pro_content .extra{
+    float: right;
+}
+.product .pro_tit .pro_content .logo img{
+    width: 15px;
+    height: 15px;
+    margin: 9px 5px 0 0;
+}
+.product .pro_tit .pro_content .state{
+    height: 34px;
+    line-height: 34px;
+    font-size: 15px;
+}
+.product .pro_tit .pro_content .extra{
+    height: 34px;
+    line-height: 34px;
+    color: #d8505c;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.product .pro_con{
+    position: relative;
+    height: 100px;
+    border-top: 1px solid #e0e0e0;
+}
+.product .pro_con .pro_detail{
+    padding-left:34px;
+    width: 100%;
+}
+.product .pro_con .pro_detail .img{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    float: left;
+}
+.product .pro_con .pro_detail .img img{
+    width: 100%;
+    display: block;
+}
+.product .pro_con .pro_detail .state{
+    overflow: hidden;
+    padding-left: 5px;
+}
+.product .pro_con .pro_detail .state p:first-of-type{
+    margin-top: 10px;
+    line-height: 12px;
+    font-size: 12px;
+    height: 24px;
+    overflow: hidden;
+}
+.product .pro_con .pro_detail .state p:nth-of-type(2){
+    margin-top: 5px;
+    color: #d8505c;
+    font-size: 12px;
+}
+.product .pro_con .pro_detail .state .btn{
+    margin-top: 5px;
+}
+.product .pro_con .pro_detail .state .btn>span{
+    display: block;
+    float: left;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border: 1px solid #e0e0e0;
+}
+.product .pro_con .pro_detail .state .btn>input{
+    width: 32px;
+    height: 24px;
+    float: left;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.product .pro_con .pro_detail .state .btn .trash{
+    float: right;
+    margin-right: 5px;
+}
+.product .pro_con .pro_detail .state .btn .trash span:first-child{
+    display: block;
+    width: 20px;
+    margin-left: -1px;
+    height: 5px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    transform-origin:0px 5px;
+}
+.product .pro_con .pro_detail .state .btn .trash span:last-child{
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -3px;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+}
+/*遮罩层样式*/
+.mask{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,.3);
+}
+.mask .model{
+    padding: 0 10px;
+    position: absolute;
+    background-color: #fff;
+    width: 80%;
+    left:50%;
+    top:50%;
+    border-radius: 5px;
+    transform:translateY(-50%) translateX(-50%);
+}
+.mask .text{
+    font-size: 18px;
+    text-align: center;
+    line-height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.mask .btn{
+    padding: 10px 0;
+}
+.mask .btn button{
+    width: 45%;
+    height: 36px;
+    border-radius: 5px;
+}
+.mask .btn button:first-child{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    float: left;
+}
+.mask .btn button:nth-child(2){
+    float: right;
+    background-color: #d8505c;
+    color: #fff;
+
+}
+.model.animate{
+    animation:jump 2s;
+    -webkit-animation: jump 0.5s;
+}
+@keyframes jump{
+    0%{
+        opacity: 0;
+        transform:translateX(-50%) translateY(-2000px);
+        -webkit-transform:translateX(-50%) translateY(-2000px);
+    }
+    70%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(20px);
+        -webkit-transform:translateX(-50%) translateY(20px);
+    }
+    80%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(-10px);
+        -webkit-transform:translateX(-50%) translateY(-10px);
+    }
+    90%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(5px);
+        -webkit-transform:translateX(-50%) translateY(5px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes  jump{
+    0%{
+        opacity: 0;
+        transform:translateX(-50%) translateY(-2000px);
+        -webkit-transform:translateX(-50%) translateY(-2000px);
+    }
+    60%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(20px);
+        -webkit-transform:translateX(-50%) translateY(20px);
+    }
+    80%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(-10px);
+        -webkit-transform:translateX(-50%) translateY(-10px);
+    }
+    90%{
+        opacity: 1;
+        transform:translateX(-50%) translateY(5px);
+        -webkit-transform:translateX(-50%) translateY(5px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
